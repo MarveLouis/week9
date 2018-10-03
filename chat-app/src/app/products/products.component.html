@@ -1,0 +1,33 @@
+
+
+  <div class="form-inline" >
+      <form (submit)="search($event)">
+      <input class="form-control" name="searchProduct"  placeholder="Search Products" type="text" [(ngModel)]="searchProduct">
+      <button class="btn btn-primary" >Search Products</button>
+      </form>
+    </div>
+
+  
+  <div *ngFor="let product of products" class="product">
+    <div class="card">
+      <div class="card-header"><h4 class="card-title">{{product.name}}</h4></div>
+      <div class="card-body">
+        <p class="card-text">
+            <strong>Product ID: </strong> {{product.prodId}}
+            <br>
+            <strong>Name: </strong> {{product.name}}
+            <br>
+            <strong>Type: </strong> {{product.type}}
+            <br>
+            <strong>Desc: </strong> {{product.desc}}
+            <br>
+            <button type="button" class="btn btn-success" (click)="crudUpdate($event, product._id)">Update</button>
+            <button type="button" class="btn btn-danger" (click)="crudRemove($event, product._id)">Delete</button>
+        </p>
+      </div>
+    </div>
+  </div>
+  
+
+
+      

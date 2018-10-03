@@ -1,0 +1,20 @@
+
+  <h1>Add Product</h1>
+  <form (submit) = "addProduct($event)">
+      <strong>Product ID</strong>
+      <input [(ngModel)]="prodId" type="text" placeholder="Product ID" id="prodId" name="prodId" class="form-control" required>
+      <br>
+      <strong>Name</strong>
+      <input [(ngModel)]="name" type="text" placeholder="Name" id="name" name="name" class="form-control" required>
+      <br>
+      <strong>Type</strong>
+      <input [(ngModel)]="type" type="text" placeholder="Type" id="type" name="type" class="form-control" required>
+      <br>
+      <strong>Descripton</strong>
+      <input [(ngModel)]="desc" type="desc" placeholder="Description" id="desc" name="desc" class="form-control" required>
+      <br>
+      <button type="submit" class="btn btn-primary">Add Product</button>
+    </form>
+
+
+
